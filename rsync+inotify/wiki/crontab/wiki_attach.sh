@@ -2,7 +2,7 @@
 # @Author: [MaxGu]
 # @Date: 2021-07-14 10:01:01
 # @LastEditors: [MaxGu]
-# @LastEditTime: 2021-07-14 10:01:13
+# @LastEditTime: 2021-07-14 14:16:45
 # @Description: 附件备份
 ###
 #!/bin/bash
@@ -22,7 +22,7 @@ if [ ! -d ${BACKUP_DIR} ]; then
 	mkdir -p ${BACKUP_DIR}
 fi
 cd $SRC
-tar -czf "${NAME}_${DATE_TIME}_bak.tar.gz" attachments
+tar -czf "${NAME}_${DATE_TIME}_bak.tar.gz" $SRC
 mv "${NAME}_${DATE_TIME}_bak.tar.gz" ${BACKUP_DIR}
 
 #写创建备份日志
